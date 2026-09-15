@@ -49,7 +49,7 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 
 ## 提交内容（Submit your run）
 
-发送邮件至 **TBD**，标题 `[TOWER Challenge] <队名> <模型版本>`：
+发送邮件至 **[corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)**，标题 `[TOWER Challenge] <队名> <模型版本>`：
 
 | 内容 | 必需 | 说明 |
 |---|---|---|
@@ -79,6 +79,6 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 
 ## 联系方式
 
-- 邮箱：**TBD**
+- 邮箱：[corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)
 - 微信群：**TBD**（二维码）
 - 问题反馈：在本仓库提 issue

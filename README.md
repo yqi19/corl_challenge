@@ -67,7 +67,7 @@ Two AgileX Nero 7-DoF arms (`left`, `back`), four RGB cameras, 30 FPS demonstrat
 
 ## Submit your run
 
-Email **TBD (challenge email)** with subject `[TOWER Challenge] <team name> <model version>`.
+Email **[corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)** with subject `[TOWER Challenge] <team name> <model version>`.
 
 | Item | Required | Description |
 |---|---|---|
@@ -129,6 +129,6 @@ keys and 18-D action described in [docs/protocol.md](docs/protocol.md).
 
 ## Contact
 
-- Email: **TBD**
+- Email: [corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)
 - WeChat group: **TBD** (QR code)
 - Questions and bug reports: open an issue in this repository.
