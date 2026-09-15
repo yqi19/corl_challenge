@@ -1,0 +1,31 @@
+{
+  "team_name": "Your Team Name",
+  "contact_email": "team@example.com",
+  "affiliation": "Example University",
+  "members": ["Name One", "Name Two"],
+  "model_name": "Your Model Name",
+  "model_version": "v1.0",
+  "base_model": "e.g. pi-0.5, ACT, Diffusion Policy, or from scratch",
+  "tasks": [
+    "task1-2_tower_transfer_2",
+    "task1-3_tower_transfer_3",
+    "task2-2_cross_tower_transfer_2",
+    "task2-3_cross_tower_transfer_3",
+    "task3-2_vertical_stacking_2",
+    "task3-3_vertical_stacking_3"
+  ],
+  "prompts": {
+    "task1-2_tower_transfer_2": "optional: the instruction your policy expects for this task"
+  },
+  "endpoint": "wss://your-host.example.org:8000",
+  "api_key_env_hint": "Send the API key in the submission email body, never in a public place",
+  "availability_utc": {
+    "start": "2026-10-01T00:00:00Z",
+    "end": "2026-10-03T00:00:00Z"
+  },
+  "inference_hardware": "e.g. 1x RTX 4090",
+  "training_data": "TOWER-SimData only | TOWER-SimData + other data (describe below)",
+  "extra_data_description": "",
+  "code_or_paper_url": "",
+  "notes": "Any deviation from the reference protocol."
+}
