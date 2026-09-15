@@ -1,6 +1,15 @@
-# TOWER Challenge @ CoRL 2026 Workshop
-
-[中文说明](README_zh.md)
+<div align="center">
+  <img src="assets/tower-logo.png" alt="TOWER" width="600" />
+  <h1>TOWER CoRL Challenge</h1>
+  <p><strong>Long-horizon bimanual tower manipulation · CoRL 2026 Workshop</strong></p>
+  <p>
+    <a href="#how-to-participate">Participate</a> ·
+    <a href="#submit-your-run">Submit your run</a> ·
+    <a href="docs/protocol.md">Protocol</a> ·
+    <a href="README_zh.md">中文说明</a>
+  </p>
+  <img src="assets/previews/task1-3_tower_transfer_3.jpg" alt="Tower Transfer, 3 layers: start (top) and end (bottom) from four cameras" width="900" />
+</div>
 
 Long-horizon bimanual block-tower manipulation in simulation. Train a policy on
 **TOWER-SimData**, serve it behind a WebSocket endpoint, and the organizers evaluate it
@@ -32,6 +41,26 @@ in the TOWER Isaac Sim benchmark. **You do not need to install Isaac Sim or the 
 Two AgileX Nero 7-DoF arms (`left`, `back`), four RGB cameras, 30 FPS demonstrations,
 18-D absolute action. SimData has no official split; all episodes may be used for training.
 
+Each preview shows the first frame (top row) and last frame (bottom row) of one demonstration
+from the four cameras.
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/previews/task1-2_tower_transfer_2.jpg" width="420" /><br/><b>Task1-2</b> Tower Transfer, 2 layers</td>
+    <td align="center"><img src="assets/previews/task1-3_tower_transfer_3.jpg" width="420" /><br/><b>Task1-3</b> Tower Transfer, 3 layers</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/previews/task2-2_cross_tower_transfer_2.jpg" width="420" /><br/><b>Task2-2</b> Cross Tower Transfer, 2 layers</td>
+    <td align="center"><img src="assets/previews/task2-3_cross_tower_transfer_3.jpg" width="420" /><br/><b>Task2-3</b> Cross Tower Transfer, 3 layers</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/previews/task3-2_vertical_stacking_2.jpg" width="420" /><br/><b>Task3-2</b> Vertical Stacking, 2 layers</td>
+    <td align="center"><img src="assets/previews/task3-3_vertical_stacking_3.jpg" width="420" /><br/><b>Task3-3</b> Vertical Stacking, 3 layers</td>
+  </tr>
+</table>
+
+Preview images are from [TOWER-SimData](https://huggingface.co/datasets/tower-benchmark/TOWER-SimData) (CC BY 4.0).
+
 ## Timeline
 
 | Date (AoE) | Milestone |
@@ -54,8 +83,14 @@ Two AgileX Nero 7-DoF arms (`left`, `back`), four RGB cameras, 30 FPS demonstrat
    python policy_server/serve_policy.py --port 8000 --checkpoint /path/to/ckpt
    ```
 
-4. **Expose** the port so the evaluator can reach it: public IP, reverse proxy with TLS
-   (`wss://`), or a tunnel (frp, cloudflared, ngrok).
+4. **Expose** the port so the evaluator can reach it. No public IP, domain, or payment is
+   needed: a free [Cloudflare Quick Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/)
+   works without an account. Step-by-step guide: [docs/public_endpoint.md](docs/public_endpoint.md).
+
+   ```bash
+   cloudflared tunnel --url http://localhost:8000
+   # prints https://<random-name>.trycloudflare.com -> submit wss://<random-name>.trycloudflare.com
+   ```
 5. **Self-check** from a machine outside your network, exactly as the evaluator calls it:
 
    ```bash
@@ -123,7 +158,11 @@ up to the 60 s timeout.
 **I trained with openpi / pi-0.5.** Keep your openpi `serve_policy.py`; map the observation
 keys and 18-D action described in [docs/protocol.md](docs/protocol.md).
 
-**No public IP?** Use a tunnel (frp, cloudflared, ngrok) or a cloud VM with a GPU.
+**No public IP? Do I need to register anywhere?** No. Use a free
+[Cloudflare Quick Tunnel](docs/public_endpoint.md): download `cloudflared` and run
+`cloudflared tunnel --url http://localhost:8000`, with no account or payment.
+[ngrok](https://ngrok.com/download) also works but requires signing up for a free account
+and adding its authtoken. A cloud VM with a public IP works too.
 
 **Image resolution?** Images arrive at the simulator's native resolution; resize in your server.
 

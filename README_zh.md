@@ -1,6 +1,15 @@
-# TOWER Challenge @ CoRL 2026 Workshop
-
-[English](README.md)
+<div align="center">
+  <img src="assets/tower-logo.png" alt="TOWER" width="600" />
+  <h1>TOWER CoRL Challenge</h1>
+  <p><strong>长程双臂积木塔操作 · CoRL 2026 Workshop</strong></p>
+  <p>
+    <a href="#参赛流程">参赛流程</a> ·
+    <a href="#提交内容submit-your-run">提交</a> ·
+    <a href="docs/protocol.md">协议</a> ·
+    <a href="README.md">English</a>
+  </p>
+  <img src="assets/previews/task1-3_tower_transfer_3.jpg" alt="Tower Transfer 3 层：四路相机的起始帧（上）与结束帧（下）" width="900" />
+</div>
 
 仿真中的长程双臂积木塔操作。参赛者用 **TOWER-SimData** 训练策略，把策略部署成一个
 WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服务完成评测。
@@ -24,6 +33,25 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 文件夹命名见 [README.md](README.md#tasks)。两台 AgileX Nero 7 自由度机械臂（`left`、`back`），
 四路 RGB 相机，18 维绝对动作。SimData 没有官方划分，全部可用于训练。
 
+每张图为一条示范的四路相机画面：上排为起始帧，下排为结束帧。
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/previews/task1-2_tower_transfer_2.jpg" width="420" /><br/><b>Task1-2</b> Tower Transfer（2 层）</td>
+    <td align="center"><img src="assets/previews/task1-3_tower_transfer_3.jpg" width="420" /><br/><b>Task1-3</b> Tower Transfer（3 层）</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/previews/task2-2_cross_tower_transfer_2.jpg" width="420" /><br/><b>Task2-2</b> Cross Tower Transfer（2 层）</td>
+    <td align="center"><img src="assets/previews/task2-3_cross_tower_transfer_3.jpg" width="420" /><br/><b>Task2-3</b> Cross Tower Transfer（3 层）</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/previews/task3-2_vertical_stacking_2.jpg" width="420" /><br/><b>Task3-2</b> Vertical Stacking（2 层）</td>
+    <td align="center"><img src="assets/previews/task3-3_vertical_stacking_3.jpg" width="420" /><br/><b>Task3-3</b> Vertical Stacking（3 层）</td>
+  </tr>
+</table>
+
+预览图来自 [TOWER-SimData](https://huggingface.co/datasets/tower-benchmark/TOWER-SimData)（CC BY 4.0）。
+
 ## 参赛流程
 
 1. **报名**：**TBD**（表单链接）。
@@ -37,7 +65,14 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
    python policy_server/serve_policy.py --port 8000 --checkpoint /path/to/ckpt
    ```
 
-4. **暴露端口**：公网 IP、带 TLS 的反向代理（`wss://`），或 frp / cloudflared / ngrok 等隧道。
+4. **暴露端口**：不需要公网 IP、域名，也不用付费。推荐免费的
+   [Cloudflare Quick Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/)，
+   无需注册账号。详细步骤见 [docs/public_endpoint.md](docs/public_endpoint.md)。
+
+   ```bash
+   cloudflared tunnel --url http://localhost:8000
+   # 输出 https://<随机名>.trycloudflare.com，提交时写 wss://<随机名>.trycloudflare.com
+   ```
 5. **自检**：在外网机器上运行，与评测端调用方式完全一致：
 
    ```bash
