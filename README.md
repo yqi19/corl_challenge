@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/tower-logo.png" alt="TOWER" width="600" />
   <h1>TOWER CoRL Challenge</h1>
-  <p><strong>Long-horizon bimanual tower manipulation · CoRL 2026 Workshop</strong></p>
+  <p><strong>Long-horizon bimanual tower manipulation · <a href="https://actiongapworkshop.github.io/">G2A: From Generative Models to Robot Actions (CoRL 2026 Workshop)</a></strong></p>
   <p>
     <a href="#how-to-participate">Participate</a> ·
     <a href="#submit-your-run">Submit your run</a> ·
