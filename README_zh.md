@@ -115,5 +115,9 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 ## 联系方式
 
 - 邮箱：[corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)
-- 微信群：**TBD**（二维码）
+- Discord：[加入 challenge 服务器](https://discord.gg/RN4xGnMJ3G)
 - 问题反馈：在本仓库提 issue
+
+微信答疑群（扫码入群；二维码会定期更新，过期请在 Discord 或邮件中索取）：
+
+<img src="assets/wechat-group.jpg" alt="微信群二维码" width="280" />

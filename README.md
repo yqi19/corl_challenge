@@ -169,5 +169,10 @@ and adding its authtoken. A cloud VM with a public IP works too.
 ## Contact
 
 - Email: [corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)
-- WeChat group: **TBD** (QR code)
+- Discord: [join the challenge server](https://discord.gg/RN4xGnMJ3G)
 - Questions and bug reports: open an issue in this repository.
+
+WeChat support group (scan to join; the code is refreshed regularly, ask on Discord or by
+email if it has expired):
+
+<img src="assets/wechat-group.jpg" alt="WeChat group QR code" width="280" />
