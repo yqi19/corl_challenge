@@ -3,6 +3,9 @@
   <h1>TOWER CoRL Challenge</h1>
   <p><strong>长程双臂积木塔操作 · <a href="https://actiongapworkshop.github.io/">G2A: From Generative Models to Robot Actions（CoRL 2026 Workshop）</a></strong></p>
   <p>
+    <a href="https://challenge.tower-benchmark.com/">官网</a> ·
+    <a href="https://challenge.tower-benchmark.com/docs/">文档</a> ·
+    <a href="https://huggingface.co/spaces/tower-benchmark/TOWER-Leaderboard">排行榜</a> ·
     <a href="#参赛流程">参赛流程</a> ·
     <a href="#提交内容submit-your-run">提交</a> ·
     <a href="docs/protocol.md">协议</a> ·
@@ -15,17 +18,19 @@
 WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服务完成评测。
 **参赛者不需要安装 Isaac Sim 或评测代码。**
 
-> 状态：草稿。标注 **TBD** 的内容将在本仓库和 Workshop 微信群公布。
+> 状态：草稿。标注 **TBD** 的内容将在[比赛官网](https://challenge.tower-benchmark.com/)、本仓库和 Workshop 微信群公布。
 
 ## 资源
 
 | 资源 | 链接 |
 |---|---|
+| 比赛官网（提交入口） | [challenge.tower-benchmark.com](https://challenge.tower-benchmark.com/) |
+| 文档 | [challenge.tower-benchmark.com/docs](https://challenge.tower-benchmark.com/docs/) |
 | 训练数据（331 条，225 GiB，HDF5） | [tower-benchmark/TOWER-SimData](https://huggingface.co/datasets/tower-benchmark/TOWER-SimData) |
 | 仿真资产 | [tower-benchmark/TOWER-Assets](https://huggingface.co/datasets/tower-benchmark/TOWER-Assets) |
 | 评测平台 | [tower-benchmark/TOWER](https://github.com/tower-benchmark/TOWER) |
 | 策略服务协议 | [docs/protocol.md](docs/protocol.md) |
-| 排行榜 | **TBD** |
+| 排行榜 | [tower-benchmark/TOWER-Leaderboard](https://huggingface.co/spaces/tower-benchmark/TOWER-Leaderboard) |
 
 ## 任务
 
@@ -54,7 +59,7 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 
 ## 参赛流程
 
-1. **报名**：**TBD**（表单链接）。
+1. **报名**：在[比赛官网](https://challenge.tower-benchmark.com/)注册队伍。
 2. **训练**：基于 TOWER-SimData 训练策略，架构不限；使用额外数据须申报。
 3. **起服务**：使用 [`policy_server/serve_policy.py`](policy_server/serve_policy.py)，
    或沿用你现有的 openpi 服务，只需实现 `Policy.infer`：
@@ -84,13 +89,13 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 
 ## 提交内容（Submit your run）
 
-发送邮件至 **[corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)**，标题 `[TOWER Challenge] <队名> <模型版本>`：
+在比赛官网提交：**[challenge.tower-benchmark.com](https://challenge.tower-benchmark.com/)**，详细步骤见[文档](https://challenge.tower-benchmark.com/docs/)。需准备：
 
 | 内容 | 必需 | 说明 |
 |---|---|---|
 | `submission.json` | 是 | 按 [`submission/submission_template.json`](submission/submission_template.json) 填写：队伍、联系人、模型、服务地址、可用时间窗口 |
 | `check_report.json` | 是 | 提交前 24 小时内对该地址运行 `tools/check_policy.py` 的输出 |
-| API key | 是 | 只写在邮件正文里，使用专用 key |
+| API key | 是 | 只填在提交表单里，使用专用 key |
 | 方法说明 | 决赛 | 1–2 页 PDF：模型结构、训练数据、训练算力 |
 
 提交后：组委会先复跑自检（失败不计次数）→ 在你的时间窗口内跑完全部任务（初始布局和种子固定且不公开）→
@@ -114,6 +119,7 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 
 ## 联系方式
 
+- 官网：[challenge.tower-benchmark.com](https://challenge.tower-benchmark.com/) · [文档](https://challenge.tower-benchmark.com/docs/) · [排行榜](https://huggingface.co/spaces/tower-benchmark/TOWER-Leaderboard)
 - 邮箱：[corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)
 - Discord：[加入 challenge 服务器](https://discord.gg/RN4xGnMJ3G)
 - 问题反馈：在本仓库提 issue

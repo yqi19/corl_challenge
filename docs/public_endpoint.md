@@ -69,7 +69,7 @@ Put the `wss://` address in `submission.json` and follow
   development, with no uptime guarantee.
 - **The address changes on every restart.** Keep both terminals running for your whole
   availability window (use `tmux` or `screen` on remote servers). If the address changes,
-  email us the new one.
+  update it on the [challenge website](https://challenge.tower-benchmark.com/) or email us.
 - **Limits.** At most 200 concurrent in-flight requests (the evaluator uses far fewer);
   Server-Sent Events are unsupported, WebSocket works.
 - **Keep the API key on.** The tunnel address is public; the key is what keeps others out.

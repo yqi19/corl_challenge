@@ -3,6 +3,9 @@
   <h1>TOWER CoRL Challenge</h1>
   <p><strong>Long-horizon bimanual tower manipulation · <a href="https://actiongapworkshop.github.io/">G2A: From Generative Models to Robot Actions (CoRL 2026 Workshop)</a></strong></p>
   <p>
+    <a href="https://challenge.tower-benchmark.com/">Website</a> ·
+    <a href="https://challenge.tower-benchmark.com/docs/">Docs</a> ·
+    <a href="https://huggingface.co/spaces/tower-benchmark/TOWER-Leaderboard">Leaderboard</a> ·
     <a href="#how-to-participate">Participate</a> ·
     <a href="#submit-your-run">Submit your run</a> ·
     <a href="docs/protocol.md">Protocol</a> ·
@@ -15,17 +18,19 @@ Long-horizon bimanual block-tower manipulation in simulation. Train a policy on
 **TOWER-SimData**, serve it behind a WebSocket endpoint, and the organizers evaluate it
 in the TOWER Isaac Sim benchmark. **You do not need to install Isaac Sim or the benchmark.**
 
-> Status: draft. Items marked **TBD** will be announced here and in the workshop WeChat group.
+> Status: draft. Items marked **TBD** will be announced on the [challenge website](https://challenge.tower-benchmark.com/), here, and in the workshop WeChat group.
 
 ## Resources
 
 | Resource | Link |
 |---|---|
+| Challenge website (submission) | [challenge.tower-benchmark.com](https://challenge.tower-benchmark.com/) |
+| Docs | [challenge.tower-benchmark.com/docs](https://challenge.tower-benchmark.com/docs/) |
 | Training data (331 episodes, 225 GiB, HDF5) | [tower-benchmark/TOWER-SimData](https://huggingface.co/datasets/tower-benchmark/TOWER-SimData) |
 | Simulation assets | [tower-benchmark/TOWER-Assets](https://huggingface.co/datasets/tower-benchmark/TOWER-Assets) |
 | Benchmark | [tower-benchmark/TOWER](https://github.com/tower-benchmark/TOWER) |
 | Policy server protocol | [docs/protocol.md](docs/protocol.md) |
-| Leaderboard | **TBD** |
+| Leaderboard | [tower-benchmark/TOWER-Leaderboard](https://huggingface.co/spaces/tower-benchmark/TOWER-Leaderboard) |
 
 ## Tasks
 
@@ -72,7 +77,7 @@ Preview images are from [TOWER-SimData](https://huggingface.co/datasets/tower-be
 
 ## How to participate
 
-1. **Register** your team: **TBD** (form link).
+1. **Register** your team on the [challenge website](https://challenge.tower-benchmark.com/).
 2. **Train** a policy on TOWER-SimData (any architecture; declare any extra data).
 3. **Serve** it with [`policy_server/serve_policy.py`](policy_server/serve_policy.py), or your
    existing openpi server. Only `Policy.infer` needs to change:
@@ -102,13 +107,14 @@ Preview images are from [TOWER-SimData](https://huggingface.co/datasets/tower-be
 
 ## Submit your run
 
-Email **[corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)** with subject `[TOWER Challenge] <team name> <model version>`.
+Submit on the challenge website: **[challenge.tower-benchmark.com](https://challenge.tower-benchmark.com/)**. The step-by-step
+submission guide is in the [Docs](https://challenge.tower-benchmark.com/docs/). Have the following ready:
 
 | Item | Required | Description |
 |---|---|---|
 | `submission.json` | yes | Filled copy of [`submission/submission_template.json`](submission/submission_template.json): team, contact, model, endpoint, availability window |
 | `check_report.json` | yes | Output of `tools/check_policy.py` against the submitted endpoint, generated within 24 h of submitting |
-| API key | yes | In the email body only; use a dedicated key |
+| API key | yes | Entered only in the submission form; use a dedicated key |
 | Method description | final round | 1–2 page PDF: architecture, training data, training compute |
 
 What happens next:
@@ -168,6 +174,7 @@ and adding its authtoken. A cloud VM with a public IP works too.
 
 ## Contact
 
+- Website: [challenge.tower-benchmark.com](https://challenge.tower-benchmark.com/) · [Docs](https://challenge.tower-benchmark.com/docs/) · [Leaderboard](https://huggingface.co/spaces/tower-benchmark/TOWER-Leaderboard)
 - Email: [corl_action_gap_workshop_pc@googlegroups.com](mailto:corl_action_gap_workshop_pc@googlegroups.com)
 - Discord: [join the challenge server](https://discord.gg/RN4xGnMJ3G)
 - Questions and bug reports: open an issue in this repository.
