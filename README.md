@@ -18,8 +18,6 @@ Long-horizon bimanual block-tower manipulation in simulation. Train a policy on
 **TOWER-SimData**, serve it behind a WebSocket endpoint, and the organizers evaluate it
 in the TOWER Isaac Sim benchmark. **You do not need to install Isaac Sim or the benchmark.**
 
-> Status: draft. Items marked **TBD** will be announced on the [challenge website](https://challenge.tower-benchmark.com/), here, and in the workshop WeChat group.
-
 ## Resources
 
 | Resource | Link |
@@ -113,18 +111,18 @@ submission guide is in the [Docs](https://challenge.tower-benchmark.com/docs/). 
 | `submission.json` | yes | Filled copy of [`submission/submission_template.json`](submission/submission_template.json): team, contact, model, endpoint, availability window |
 | `check_report.json` | yes | Output of `tools/check_policy.py` against the submitted endpoint, generated within 24 h of submitting |
 | API key | yes | Entered only in the submission form; use a dedicated key |
-| Method description | final round | 1–2 page PDF: architecture, training data, training compute |
+| Method description | top teams | 1–2 page PDF: architecture, training data, training compute |
 
 What happens next:
 
 1. We run the same check against your endpoint. If it fails, we reply and the attempt is not counted.
-2. Evaluation runs inside your availability window (at least **TBD** hours; all tasks, fixed
-   initial layouts and seeds, hidden from participants).
-3. Results are verified and published on the leaderboard, typically within **TBD** days.
+2. Evaluation runs inside your availability window (all tasks, fixed initial layouts and
+   seeds, hidden from participants).
+3. Results are verified and published on the leaderboard.
 
 Rules:
 
-- At most **TBD** evaluated submissions per team per round; the best one is ranked.
+- The best evaluated submission per team is ranked; see the [Docs](https://challenge.tower-benchmark.com/docs/) for submission limits.
 - The endpoint must serve the same model for the whole evaluation window. Do not change
   weights or behavior between episodes.
 - The policy may use only the provided observations. Human intervention, scripted access
@@ -135,8 +133,8 @@ Rules:
 
 Every task is evaluated separately on fixed initial layouts with fixed inference seeds.
 The simulation pauses during inference; the policy runs at 10 Hz and 16 actions are
-executed per request. An episode ends on success, time limit (**TBD** per task), or a
-policy error.
+executed per request. An episode ends on success, the per-task time limit, or a policy
+error.
 
 | Level | Metric | Definition |
 |---|---|---|

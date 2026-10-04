@@ -18,8 +18,6 @@
 WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服务完成评测。
 **参赛者不需要安装 Isaac Sim 或评测代码。**
 
-> 状态：草稿。标注 **TBD** 的内容将在[比赛官网](https://challenge.tower-benchmark.com/)、本仓库和 Workshop 微信群公布。
-
 ## 资源
 
 | 资源 | 链接 |
@@ -103,12 +101,12 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 | `submission.json` | 是 | 按 [`submission/submission_template.json`](submission/submission_template.json) 填写：队伍、联系人、模型、服务地址、可用时间窗口 |
 | `check_report.json` | 是 | 提交前 24 小时内对该地址运行 `tools/check_policy.py` 的输出 |
 | API key | 是 | 只填在提交表单里，使用专用 key |
-| 方法说明 | 决赛 | 1–2 页 PDF：模型结构、训练数据、训练算力 |
+| 方法说明 | 前列队伍 | 1–2 页 PDF：模型结构、训练数据、训练算力 |
 
 提交后：组委会先复跑自检（失败不计次数）→ 在你的时间窗口内跑完全部任务（初始布局和种子固定且不公开）→
 核验后更新排行榜。
 
-规则：每轮每队最多评测 **TBD** 次，取最好成绩；评测期间不得更换模型；策略只能使用提供的观测，
+规则：每队取最好一次评测成绩（提交次数上限见[文档](https://challenge.tower-benchmark.com/docs/)）；评测期间不得更换模型；策略只能使用提供的观测，
 禁止人工干预、读取仿真器内部状态或针对测试布局硬编码；前列队伍需提供推理代码或 Docker 镜像供复核。
 
 ## 评测指标
