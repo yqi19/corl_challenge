@@ -28,7 +28,6 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 | 文档 | [challenge.tower-benchmark.com/docs](https://challenge.tower-benchmark.com/docs/) |
 | 训练数据（331 条，225 GiB，HDF5） | [tower-benchmark/TOWER-SimData](https://huggingface.co/datasets/tower-benchmark/TOWER-SimData) |
 | 仿真资产 | [tower-benchmark/TOWER-Assets](https://huggingface.co/datasets/tower-benchmark/TOWER-Assets) |
-| 评测平台 | [tower-benchmark/TOWER](https://github.com/tower-benchmark/TOWER) |
 | 策略服务协议 | [docs/protocol.md](docs/protocol.md) |
 | 排行榜 | [tower-benchmark/TOWER-Leaderboard](https://huggingface.co/spaces/tower-benchmark/TOWER-Leaderboard) |
 

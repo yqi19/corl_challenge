@@ -28,7 +28,6 @@ in the TOWER Isaac Sim benchmark. **You do not need to install Isaac Sim or the 
 | Docs | [challenge.tower-benchmark.com/docs](https://challenge.tower-benchmark.com/docs/) |
 | Training data (331 episodes, 225 GiB, HDF5) | [tower-benchmark/TOWER-SimData](https://huggingface.co/datasets/tower-benchmark/TOWER-SimData) |
 | Simulation assets | [tower-benchmark/TOWER-Assets](https://huggingface.co/datasets/tower-benchmark/TOWER-Assets) |
-| Benchmark | [tower-benchmark/TOWER](https://github.com/tower-benchmark/TOWER) |
 | Policy server protocol | [docs/protocol.md](docs/protocol.md) |
 | Leaderboard | [tower-benchmark/TOWER-Leaderboard](https://huggingface.co/spaces/tower-benchmark/TOWER-Leaderboard) |
 
