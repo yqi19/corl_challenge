@@ -70,10 +70,9 @@ Preview images are from [TOWER-SimData](https://huggingface.co/datasets/tower-be
 
 | Date (AoE) | Milestone |
 |---|---|
-| **TBD** | Challenge opens, registration starts |
-| **TBD** | Round 1 submission deadline |
-| **TBD** | Final submission deadline |
-| **TBD** | Results and workshop presentations |
+| **Oct 4, 2026** | Challenge opens, registration starts |
+| **Oct 31, 2026** | Submission deadline |
+| **Nov 12, 2026** | Results and workshop presentations at CoRL 2026 (Austin, Texas) |
 
 ## How to participate
 

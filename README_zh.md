@@ -57,6 +57,14 @@ WebSocket 服务；组委会在 TOWER Isaac Sim 评测平台上调用你的服�
 
 预览图来自 [TOWER-SimData](https://huggingface.co/datasets/tower-benchmark/TOWER-SimData)（CC BY 4.0）。
 
+## 时间线
+
+| 日期（AoE） | 事项 |
+|---|---|
+| **2026 年 10 月 4 日** | 比赛开放，开始报名 |
+| **2026 年 10 月 31 日** | 提交截止 |
+| **2026 年 11 月 12 日** | 公布结果，CoRL 2026 Workshop 现场报告（美国得州奥斯汀） |
+
 ## 参赛流程
 
 1. **报名**：在[比赛官网](https://challenge.tower-benchmark.com/)注册队伍。
